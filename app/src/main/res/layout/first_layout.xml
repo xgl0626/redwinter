@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/login_bg"
+    app:layout_editor_absoluteY="81dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context="com.example.myapplication.MainActivity"
+    >
+    <include layout="@layout/tilte1"/>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splash_logo" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="用户名登录"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/my_button_shape"
+        android:textSize="24px"
+        android:drawableLeft="@drawable/ic_user"
+        />
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新浪微博"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/my_button_shape"
+        android:textSize="36px"
+        android:drawableLeft="@drawable/account_sina"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="腾讯微博"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/my_button_shape"
+        android:textSize="36px"
+        android:drawableLeft="@drawable/account_tencent"
+        />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/ic_back_register"
+        android:text="注册"
+        android:textSize="34px"/>
+
+</LinearLayout>
