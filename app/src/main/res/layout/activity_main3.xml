@@ -3,7 +3,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_register"
     >
-    <include layout="@layout/tilte3"/>
 
     <EditText
         android:id="@+id/account"
