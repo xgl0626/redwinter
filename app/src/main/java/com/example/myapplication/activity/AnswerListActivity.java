@@ -120,8 +120,8 @@ public class AnswerListActivity<actionBar> extends AppCompatActivity {
     private void setUpRecyclerView() {
         LinearLayoutManager layoutManager = new LinearLayoutManager(AnswerListActivity.this);
         layoutManager.setOrientation(RecyclerView.VERTICAL);
-        answerAdapter = new AnswerAdapter(mUser,mQuestion);
         recyclerView.setLayoutManager(layoutManager);
+        answerAdapter = new AnswerAdapter(mUser,mQuestion);
         recyclerView.setAdapter(answerAdapter);
 
     }

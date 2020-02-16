@@ -56,6 +56,7 @@ public class AnswerVIewHolder extends RecyclerView.ViewHolder implements View.On
     }
     public void updata(Answer answer,Question question)
     {
+        mQuestion=question;
         answerName.setText(answer.getAuthorName());
         answerTime.setText(answer.getDate());
         answerContent.setText(answer.getContent());
@@ -83,7 +84,7 @@ public class AnswerVIewHolder extends RecyclerView.ViewHolder implements View.On
 
     @Override
     public void onClick(View v) {
-        Answer answer=mAnswerList.get(getLayoutPosition());
+        Answer answer=mAnswerList.get(getLayoutPosition()-1);
         String param="id"+answer.getId()+"&type=2&yoken="+mUser.getToken();
       switch (v.getId())
       {
@@ -102,18 +103,18 @@ public class AnswerVIewHolder extends RecyclerView.ViewHolder implements View.On
               a_nativeCounts.setText("(" + answer.getNaiveCount() + ")");
               break;
           case R.id.excitingButton:
-              if(answer.isIs_Best()) {
+              if(answer.isIs_exciting()) {
                   HttpUtil.sendHttpRequest(apiconfig.CANCEL_EXCITING, param);
                   a_excite.setBackgroundResource(R.drawable.like_filled);
                   answer.setExcitingCount(answer.getExcitingCount()-1);
-                  answer.setIs_Best(false);
+                  answer.setIs_exciting(false);
               }
               else
               {
                   HttpUtil.sendHttpRequest(apiconfig.EXCITING, param);
                   a_excite.setBackgroundResource(R.drawable.like);
                   answer.setExcitingCount(answer.getExcitingCount()+1);
-                  answer.setIs_Best(true);
+                  answer.setIs_exciting(true);
               }
               a_exciteCounts.setText("(" + answer.getExcitingCount() + ")");
               break;
