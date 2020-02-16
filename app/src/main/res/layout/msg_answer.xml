@@ -54,17 +54,15 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"/>
-
-        <TextView
-            android:id="@+id/naiveCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
         <ImageButton
             android:id="@+id/naiveButton"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:background="@drawable/star" />
+        <TextView
+            android:id="@+id/naiveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
         <ImageButton
             android:id="@+id/acceptButton"

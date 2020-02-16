@@ -37,7 +37,8 @@ public class changePasswordActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.changepassword);
-        user = getIntent().getParcelableExtra("user");
+        Intent intent=getIntent();
+        user = intent.getParcelableExtra("user");
         newPassword=(Button)findViewById(R.id.n_pass);
         toolbar=(Toolbar)findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
@@ -81,10 +82,9 @@ public class changePasswordActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(HttpUtil.Response response) {
                         if(response.isSuccess()) {
-                           ToastUtils.showHint(response.getInfo());
+                            ToastUtils.showHint(response.getInfo());
                             SharedPreferences.Editor editor = sharedPreferences.edit();
                             editor.putString("password", password);
-                            editor.putBoolean("ischecked",false);
                             editor.apply();
                             user.setToken(Json.getElement(response.bodyString(),"token"));
                             finish();

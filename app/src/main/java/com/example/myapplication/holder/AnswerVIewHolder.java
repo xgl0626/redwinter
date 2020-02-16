@@ -76,9 +76,9 @@ public class AnswerVIewHolder extends RecyclerView.ViewHolder implements View.On
 
                 }
             });
-        a_like.setBackgroundResource(answer.isIs_Best()? R.drawable.favorite:R.drawable.close);
-        a_excite.setBackgroundResource(answer.isIs_exciting()? R.drawable.like_filled:R.drawable.like);
-        a_native.setBackgroundResource(answer.isIs_naive()? R.drawable.star_filled:R.drawable.star);
+        a_like.setBackgroundResource(answer.isIs_Best()? R.drawable.close:R.drawable.favorite);
+        a_excite.setBackgroundResource(answer.isIs_exciting()? R.drawable.like:R.drawable.like_filled);
+        a_native.setBackgroundResource(answer.isIs_naive()? R.drawable.star:R.drawable.star_filled);
     }
 
     @Override
